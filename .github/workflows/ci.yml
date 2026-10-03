@@ -1,0 +1,32 @@
+name: Lab validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install tested dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Run complete test suite
+        run: python -m pytest -q
+      - name: Verify benchmark repeatability from clean state
+        run: |
+          python src/benchmark.py > /tmp/benchmark-first.md
+          rm -rf state
+          python src/benchmark.py > /tmp/benchmark-second.md
+          diff -u /tmp/benchmark-first.md /tmp/benchmark-second.md
+      - name: Verify bonus comparison
+        run: python src/benchmark_conflicts.py --output /tmp/conflict-results.json

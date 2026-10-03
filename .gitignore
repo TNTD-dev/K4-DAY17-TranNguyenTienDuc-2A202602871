@@ -1,4 +1,7 @@
 .env
+.env.*
+!.env.example
+.venv/
 lab.txt
 labs/
 .pytest_cache/

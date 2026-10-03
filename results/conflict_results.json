@@ -1,0 +1,468 @@
+{
+  "mode": "offline",
+  "compact_threshold_tokens": 1000,
+  "compact_keep_messages": 4,
+  "control": "First value wins for location/profession; all other behavior unchanged",
+  "datasets": {
+    "standard": [
+      {
+        "metrics": {
+          "agent_name": "First value wins",
+          "agent_tokens_only": 1538,
+          "prompt_tokens_processed": 28297,
+          "recall_score": 0.6428571428571429,
+          "response_quality": 0.6678571428571428,
+          "memory_growth_bytes": 324,
+          "compactions": 0
+        },
+        "recall_answers": [
+          {
+            "conversation_id": "conv-01",
+            "question": "Mình tên gì và đồ uống yêu thích là gì?",
+            "answer": "Tên: DũngCT; Đồ uống yêu thích: cà phê sữa đá.",
+            "expected_contains": [
+              "DũngCT",
+              "cà phê sữa đá"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-02",
+            "question": "Nhắc lại style trả lời mình thích và đồ uống yêu thích của mình.",
+            "answer": "- Đồ uống yêu thích: cà phê sữa đá.\n- Phong cách trả lời: ngắn gọn; có ví dụ thực tế/thực chiến; có bullet.",
+            "expected_contains": [
+              "ngắn gọn",
+              "cà phê sữa đá"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-02",
+            "question": "Tên mình là gì và mình thích kiểu trả lời như thế nào?",
+            "answer": "- Tên: DũngCT.\n- Phong cách trả lời: ngắn gọn; có ví dụ thực tế/thực chiến; có bullet.",
+            "expected_contains": [
+              "DũngCT",
+              "ngắn gọn"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-03",
+            "question": "Hiện tại mình đang ở đâu?",
+            "answer": "- Nơi ở hiện tại: Đà Nẵng.",
+            "expected_contains": [
+              "Huế"
+            ],
+            "missing": [
+              "Huế"
+            ]
+          },
+          {
+            "conversation_id": "conv-04",
+            "question": "Món ăn yêu thích của mình là gì và mình nuôi con gì?",
+            "answer": "- Món ăn yêu thích: mì Quảng.\n- Thú nuôi: corgi tên Bơ.",
+            "expected_contains": [
+              "mì Quảng",
+              "corgi"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-05",
+            "question": "Bạn biết DũngCT là ai không? Hãy nhắc ngắn gọn tên và mối quan tâm chính của mình.",
+            "answer": "- Tên: DũngCT.\n- Mối quan tâm kỹ thuật: Python, AI agent.",
+            "expected_contains": [
+              "DũngCT",
+              "Python",
+              "AI"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-06",
+            "question": "Hiện tại mình làm nghề gì và mình còn ở Huế không?",
+            "answer": "- Nơi ở hiện tại: Đà Nẵng.\n- Nghề nghiệp hiện tại: backend engineer.",
+            "expected_contains": [
+              "MLOps engineer",
+              "Huế"
+            ],
+            "missing": [
+              "MLOps engineer",
+              "Huế"
+            ]
+          },
+          {
+            "conversation_id": "conv-06",
+            "question": "Nếu phải chọn giữa nghề cũ và nghề mới, nghề hiện tại của mình là gì?",
+            "answer": "- Nghề nghiệp hiện tại: backend engineer.",
+            "expected_contains": [
+              "MLOps engineer"
+            ],
+            "missing": [
+              "MLOps engineer"
+            ]
+          },
+          {
+            "conversation_id": "conv-07",
+            "question": "Mình thích style trả lời như thế nào và hiện đang ở đâu?",
+            "answer": "- Nơi ở hiện tại: Đà Nẵng.\n- Phong cách trả lời: ngắn gọn; có ví dụ thực tế/thực chiến; có bullet; ưu tiên trade-off.",
+            "expected_contains": [
+              "ngắn gọn",
+              "Huế"
+            ],
+            "missing": [
+              "Huế"
+            ]
+          },
+          {
+            "conversation_id": "conv-08",
+            "question": "Đồ uống và món ăn yêu thích của mình là gì?",
+            "answer": "- Đồ uống yêu thích: cà phê sữa đá.\n- Món ăn yêu thích: mì Quảng.",
+            "expected_contains": [
+              "cà phê sữa đá",
+              "mì Quảng"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-08",
+            "question": "Hiện tại mình đang ở đâu và mình nuôi con gì?",
+            "answer": "- Nơi ở hiện tại: Đà Nẵng.\n- Thú nuôi: corgi tên Bơ.",
+            "expected_contains": [
+              "Huế",
+              "corgi"
+            ],
+            "missing": [
+              "Huế"
+            ]
+          },
+          {
+            "conversation_id": "conv-09",
+            "question": "Tóm tắt ngắn về mình: tên, nghề nghiệp hiện tại và hai mối quan tâm kỹ thuật chính.",
+            "answer": "- Tên: DũngCT.\n- Nơi ở hiện tại: Đà Nẵng.\n- Nghề nghiệp hiện tại: backend engineer.\n- Đồ uống yêu thích: cà phê sữa đá.\n- Món ăn yêu thích: mì Quảng.\n- Thú nuôi: corgi tên Bơ.\n- Mối quan tâm kỹ thuật: Python, AI ứng dụng.\n- Phong cách trả lời: ngắn gọn; có ví dụ thực tế/thực chiến; có bullet; ưu tiên trade-off.",
+            "expected_contains": [
+              "DũngCT",
+              "MLOps engineer",
+              "Python",
+              "AI"
+            ],
+            "missing": [
+              "MLOps engineer"
+            ]
+          },
+          {
+            "conversation_id": "conv-10",
+            "question": "Nhắc lại giúp mình: tên, nơi ở hiện tại, nghề nghiệp hiện tại, đồ uống yêu thích và style trả lời mình thích.",
+            "answer": "- Tên: DũngCT.\n- Nơi ở hiện tại: Đà Nẵng.\n- Nghề nghiệp hiện tại: backend engineer.\n- Đồ uống yêu thích: cà phê sữa đá.\n- Phong cách trả lời: ngắn gọn; có ví dụ thực tế/thực chiến; có bullet; ưu tiên trade-off.",
+            "expected_contains": [
+              "DũngCT",
+              "Huế",
+              "MLOps engineer",
+              "cà phê sữa đá",
+              "ngắn gọn"
+            ],
+            "missing": [
+              "Huế",
+              "MLOps engineer"
+            ]
+          },
+          {
+            "conversation_id": "conv-10",
+            "question": "Nhắc lại giúp mình: tên, món ăn yêu thích và mình nuôi con gì.",
+            "answer": "- Tên: DũngCT.\n- Món ăn yêu thích: mì Quảng.\n- Thú nuôi: corgi tên Bơ.",
+            "expected_contains": [
+              "DũngCT",
+              "mì Quảng",
+              "corgi"
+            ],
+            "missing": []
+          }
+        ],
+        "final_profiles": {
+          "dungct": "# User Profile\n- name: DũngCT\n- location: Đà Nẵng\n- profession: backend engineer\n- interests: Python, AI ứng dụng\n- favorite_drink: cà phê sữa đá\n- response_style: ngắn gọn; có ví dụ thực tế/thực chiến; có bullet; ưu tiên trade-off\n- favorite_food: mì Quảng\n- pet: corgi\n- pet_name: Bơ\n"
+        }
+      },
+      {
+        "metrics": {
+          "agent_name": "Conflict handling",
+          "agent_tokens_only": 1523,
+          "prompt_tokens_processed": 28182,
+          "recall_score": 1.0,
+          "response_quality": 1.0,
+          "memory_growth_bytes": 316,
+          "compactions": 0
+        },
+        "recall_answers": [
+          {
+            "conversation_id": "conv-01",
+            "question": "Mình tên gì và đồ uống yêu thích là gì?",
+            "answer": "Tên: DũngCT; Đồ uống yêu thích: cà phê sữa đá.",
+            "expected_contains": [
+              "DũngCT",
+              "cà phê sữa đá"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-02",
+            "question": "Nhắc lại style trả lời mình thích và đồ uống yêu thích của mình.",
+            "answer": "- Đồ uống yêu thích: cà phê sữa đá.\n- Phong cách trả lời: ngắn gọn; có ví dụ thực tế/thực chiến; có bullet.",
+            "expected_contains": [
+              "ngắn gọn",
+              "cà phê sữa đá"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-02",
+            "question": "Tên mình là gì và mình thích kiểu trả lời như thế nào?",
+            "answer": "- Tên: DũngCT.\n- Phong cách trả lời: ngắn gọn; có ví dụ thực tế/thực chiến; có bullet.",
+            "expected_contains": [
+              "DũngCT",
+              "ngắn gọn"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-03",
+            "question": "Hiện tại mình đang ở đâu?",
+            "answer": "- Nơi ở hiện tại: Huế.",
+            "expected_contains": [
+              "Huế"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-04",
+            "question": "Món ăn yêu thích của mình là gì và mình nuôi con gì?",
+            "answer": "- Món ăn yêu thích: mì Quảng.\n- Thú nuôi: corgi tên Bơ.",
+            "expected_contains": [
+              "mì Quảng",
+              "corgi"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-05",
+            "question": "Bạn biết DũngCT là ai không? Hãy nhắc ngắn gọn tên và mối quan tâm chính của mình.",
+            "answer": "- Tên: DũngCT.\n- Mối quan tâm kỹ thuật: Python, AI agent.",
+            "expected_contains": [
+              "DũngCT",
+              "Python",
+              "AI"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-06",
+            "question": "Hiện tại mình làm nghề gì và mình còn ở Huế không?",
+            "answer": "- Nơi ở hiện tại: Huế.\n- Nghề nghiệp hiện tại: MLOps engineer.",
+            "expected_contains": [
+              "MLOps engineer",
+              "Huế"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-06",
+            "question": "Nếu phải chọn giữa nghề cũ và nghề mới, nghề hiện tại của mình là gì?",
+            "answer": "- Nghề nghiệp hiện tại: MLOps engineer.",
+            "expected_contains": [
+              "MLOps engineer"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-07",
+            "question": "Mình thích style trả lời như thế nào và hiện đang ở đâu?",
+            "answer": "- Nơi ở hiện tại: Huế.\n- Phong cách trả lời: ngắn gọn; có ví dụ thực tế/thực chiến; có bullet; ưu tiên trade-off.",
+            "expected_contains": [
+              "ngắn gọn",
+              "Huế"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-08",
+            "question": "Đồ uống và món ăn yêu thích của mình là gì?",
+            "answer": "- Đồ uống yêu thích: cà phê sữa đá.\n- Món ăn yêu thích: mì Quảng.",
+            "expected_contains": [
+              "cà phê sữa đá",
+              "mì Quảng"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-08",
+            "question": "Hiện tại mình đang ở đâu và mình nuôi con gì?",
+            "answer": "- Nơi ở hiện tại: Huế.\n- Thú nuôi: corgi tên Bơ.",
+            "expected_contains": [
+              "Huế",
+              "corgi"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-09",
+            "question": "Tóm tắt ngắn về mình: tên, nghề nghiệp hiện tại và hai mối quan tâm kỹ thuật chính.",
+            "answer": "- Tên: DũngCT.\n- Nơi ở hiện tại: Huế.\n- Nghề nghiệp hiện tại: MLOps engineer.\n- Đồ uống yêu thích: cà phê sữa đá.\n- Món ăn yêu thích: mì Quảng.\n- Thú nuôi: corgi tên Bơ.\n- Mối quan tâm kỹ thuật: Python, AI ứng dụng.\n- Phong cách trả lời: ngắn gọn; có ví dụ thực tế/thực chiến; có bullet; ưu tiên trade-off.",
+            "expected_contains": [
+              "DũngCT",
+              "MLOps engineer",
+              "Python",
+              "AI"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-10",
+            "question": "Nhắc lại giúp mình: tên, nơi ở hiện tại, nghề nghiệp hiện tại, đồ uống yêu thích và style trả lời mình thích.",
+            "answer": "- Tên: DũngCT.\n- Nơi ở hiện tại: Huế.\n- Nghề nghiệp hiện tại: MLOps engineer.\n- Đồ uống yêu thích: cà phê sữa đá.\n- Phong cách trả lời: ngắn gọn; có ví dụ thực tế/thực chiến; có bullet; ưu tiên trade-off.",
+            "expected_contains": [
+              "DũngCT",
+              "Huế",
+              "MLOps engineer",
+              "cà phê sữa đá",
+              "ngắn gọn"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "conv-10",
+            "question": "Nhắc lại giúp mình: tên, món ăn yêu thích và mình nuôi con gì.",
+            "answer": "- Tên: DũngCT.\n- Món ăn yêu thích: mì Quảng.\n- Thú nuôi: corgi tên Bơ.",
+            "expected_contains": [
+              "DũngCT",
+              "mì Quảng",
+              "corgi"
+            ],
+            "missing": []
+          }
+        ],
+        "final_profiles": {
+          "dungct": "# User Profile\n- name: DũngCT\n- location: Huế\n- profession: MLOps engineer\n- interests: Python, AI ứng dụng\n- favorite_drink: cà phê sữa đá\n- response_style: ngắn gọn; có ví dụ thực tế/thực chiến; có bullet; ưu tiên trade-off\n- favorite_food: mì Quảng\n- pet: corgi\n- pet_name: Bơ\n"
+        }
+      }
+    ],
+    "long_context": [
+      {
+        "metrics": {
+          "agent_name": "First value wins",
+          "agent_tokens_only": 819,
+          "prompt_tokens_processed": 12603,
+          "recall_score": 0.6666666666666666,
+          "response_quality": 0.75,
+          "memory_growth_bytes": 232,
+          "compactions": 4
+        },
+        "recall_answers": [
+          {
+            "conversation_id": "stress-01",
+            "question": "Sang thread mới rồi, nhắc lại giúp mình tên, nghề nghiệp hiện tại, nơi ở hiện tại và style trả lời mình thích.",
+            "answer": "- Tên: DũngCT Stress.\n- Nơi ở hiện tại: Huế.\n- Nghề nghiệp hiện tại: MLOps engineer; Phong cách trả lời: ngắn gọn; 3 bullet; ưu tiên trade-off; có ví dụ thực tế/thực chiến.",
+            "expected_contains": [
+              "DũngCT Stress",
+              "MLOps engineer",
+              "Đà Nẵng",
+              "3 bullet"
+            ],
+            "missing": [
+              "Đà Nẵng"
+            ]
+          },
+          {
+            "conversation_id": "stress-01",
+            "question": "Nếu ai đó nhắc Huế, Hà Nội hay product manager, đâu mới là nghề nghiệp và nơi ở hiện tại của mình?",
+            "answer": "- Nơi ở hiện tại: Huế.\n- Nghề nghiệp hiện tại: MLOps engineer.\n- Nội dung được dùng trong ngữ cảnh hiện tại.",
+            "expected_contains": [
+              "MLOps engineer",
+              "Đà Nẵng"
+            ],
+            "missing": [
+              "Đà Nẵng"
+            ]
+          },
+          {
+            "conversation_id": "stress-01",
+            "question": "Nhắc lại giúp mình tên và style trả lời mình thích trong stress test này.",
+            "answer": "- Tên: DũngCT Stress.\n- Phong cách trả lời: ngắn gọn; 3 bullet; ưu tiên trade-off; có ví dụ thực tế/thực chiến.\n- Nội dung được dùng trong ngữ cảnh hiện tại.",
+            "expected_contains": [
+              "DũngCT Stress",
+              "3 bullet"
+            ],
+            "missing": []
+          }
+        ],
+        "final_profiles": {
+          "dungct_stress": "# User Profile\n- location: Huế\n- name: DũngCT Stress\n- profession: MLOps engineer\n- response_style: ngắn gọn; 3 bullet; ưu tiên trade-off; có ví dụ thực tế/thực chiến\n- interests: Python, AI ứng dụng, MLOps\n"
+        }
+      },
+      {
+        "metrics": {
+          "agent_name": "Conflict handling",
+          "agent_tokens_only": 822,
+          "prompt_tokens_processed": 12617,
+          "recall_score": 1.0,
+          "response_quality": 1.0,
+          "memory_growth_bytes": 238,
+          "compactions": 4
+        },
+        "recall_answers": [
+          {
+            "conversation_id": "stress-01",
+            "question": "Sang thread mới rồi, nhắc lại giúp mình tên, nghề nghiệp hiện tại, nơi ở hiện tại và style trả lời mình thích.",
+            "answer": "- Tên: DũngCT Stress.\n- Nơi ở hiện tại: Đà Nẵng.\n- Nghề nghiệp hiện tại: MLOps engineer; Phong cách trả lời: ngắn gọn; 3 bullet; ưu tiên trade-off; có ví dụ thực tế/thực chiến.",
+            "expected_contains": [
+              "DũngCT Stress",
+              "MLOps engineer",
+              "Đà Nẵng",
+              "3 bullet"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "stress-01",
+            "question": "Nếu ai đó nhắc Huế, Hà Nội hay product manager, đâu mới là nghề nghiệp và nơi ở hiện tại của mình?",
+            "answer": "- Nơi ở hiện tại: Đà Nẵng.\n- Nghề nghiệp hiện tại: MLOps engineer.\n- Nội dung được dùng trong ngữ cảnh hiện tại.",
+            "expected_contains": [
+              "MLOps engineer",
+              "Đà Nẵng"
+            ],
+            "missing": []
+          },
+          {
+            "conversation_id": "stress-01",
+            "question": "Nhắc lại giúp mình tên và style trả lời mình thích trong stress test này.",
+            "answer": "- Tên: DũngCT Stress.\n- Phong cách trả lời: ngắn gọn; 3 bullet; ưu tiên trade-off; có ví dụ thực tế/thực chiến.\n- Nội dung được dùng trong ngữ cảnh hiện tại.",
+            "expected_contains": [
+              "DũngCT Stress",
+              "3 bullet"
+            ],
+            "missing": []
+          }
+        ],
+        "final_profiles": {
+          "dungct_stress": "# User Profile\n- location: Đà Nẵng\n- name: DũngCT Stress\n- profession: MLOps engineer\n- response_style: ngắn gọn; 3 bullet; ưu tiên trade-off; có ví dụ thực tế/thực chiến\n- interests: Python, AI ứng dụng, MLOps\n"
+        }
+      }
+    ]
+  },
+  "extraction_limit_probes": [
+    {
+      "message": "Mình ở Đà Nẵng, trước đây mình ở Huế.",
+      "expected_updates": {
+        "location": "Đà Nẵng"
+      },
+      "actual_updates": {
+        "location": "Đà Nẵng"
+      },
+      "matches_expected": true
+    },
+    {
+      "message": "Bạn tôi tên là An.",
+      "expected_updates": {},
+      "actual_updates": {},
+      "matches_expected": true
+    }
+  ]
+}
