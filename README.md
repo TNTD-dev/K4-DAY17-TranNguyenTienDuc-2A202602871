@@ -6,7 +6,7 @@
 Repo bài nộp: [K4-DAY17-TranNguyenTienDuc-2A202602871](https://github.com/TNTD-dev/K4-DAY17-TranNguyenTienDuc-2A202602871).
 
 Bài làm đã hoàn thành phần triển khai, benchmark, test và phân tích. Xem
-[phân tích kết quả và bonus](results/memory_analysis.md),
+[STEP8 — phân tích kết quả và bonus](STEP8.md),
 [bảng benchmark](results/benchmark_results.md) và
 [số liệu kiểm chứng conflict handling](results/conflict_results.json).
 Hướng dẫn các phần đã triển khai nằm trong [src/README.md](src/README.md).
@@ -49,6 +49,7 @@ Sau khi hoàn thành, các bạn cần có khả năng:
 ├── README.md        # giới thiệu track (file này)
 ├── Guide.md         # hướng dẫn từng bước
 ├── Rubric.md        # tiêu chí chấm điểm
+├── STEP8.md         # trả lời bốn câu hỏi phân tích kết quả và bonus
 ├── data/            # dữ liệu benchmark dùng chung
 │   ├── conversations.json
 │   └── advanced_long_context.json

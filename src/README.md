@@ -230,7 +230,7 @@ in Step 10 below.
 
 ## Result analysis and bonus (Step 10)
 
-`results/memory_analysis.md` answers all four analysis questions, ties each
+`STEP8.md` at the repository root answers all four analysis questions, ties each
 conclusion to measured metrics and implementation, and maps the evidence to
 `Rubric.md`. The chosen bonus is conflict handling, already implemented through
 fact upserts, deduplication, current-profile precedence and partial style merges.

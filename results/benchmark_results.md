@@ -81,4 +81,4 @@ python src/benchmark.py
 
 Lệnh thứ hai chạy lại với cấu hình thông thường và tái tạo profile benchmark.
 File này ghi số liệu kiểm chứng mục 9. Phân tích đầy đủ và bonus ở mục 10 đã được
-lưu tại [memory_analysis.md](memory_analysis.md).
+lưu tại [STEP8.md](../STEP8.md).
