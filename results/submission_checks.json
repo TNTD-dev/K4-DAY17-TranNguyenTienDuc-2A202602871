@@ -1,0 +1,31 @@
+{
+  "validation": "fresh checkout with fresh Python environment",
+  "api_keys_required": false,
+  "python": "Python 3.12.14",
+  "required_tests_passed": 4,
+  "full_tests_passed": 138,
+  "benchmark_runs_identical": true,
+  "benchmark_output_sha256": "0ad2ee95072889b0ff4cd57310af5df6d41ade19845270dacc6bf48835df38e4",
+  "bonus_matches_saved_evidence": true,
+  "starts_without_env_or_state": true,
+  "source_sha256": {
+    ".env.example": "267a2120b45827ef120243aba71dc40f312690a458f4fb76f94ac579bf66de28",
+    "requirements.txt": "5f9659eea34fa384ece2646fa405dd9f3ea1fc2e625cf82eb802b76b75aaa77e",
+    "src/agent_advanced.py": "2d2b5d5cca8151abbc491c41fc409910abd04a453479ca80c33b1269148662de",
+    "src/agent_baseline.py": "a19237ee1745e7333ab7ed98d7e904daa0472093c01067b6e3ca88972c236c56",
+    "src/benchmark.py": "4996f46278da378b1274ca6cd831c984852446c5c984a70e0cbcdf106973625b",
+    "src/benchmark_conflicts.py": "a297541aa92188c2b96df7850911ababe47e2072226dd816fe5f2108569dc993",
+    "src/config.py": "d3965f72f86788c36a60963b745fcc77d1848ea5fc9c5f9d4acb056f6e198f31",
+    "src/memory_store.py": "7bb50bc8e0f07f79e71111fdbe70360b0c51773ac1f16dee9ffc4950d9efaedb",
+    "src/model_provider.py": "50b45aab791a6bd7e3b9ef6b61757ede9ab21d5ca6567a52dfd9094a6b094f34",
+    "src/offline_response.py": "7ecf042b13ee2a4989842c296039517805a989c5150796a441f25b4228a15d00",
+    "src/test_advanced_agent.py": "5c3ec86d3932ed704f2a66a018760210c720c14641de5c239182b3af9861cec7",
+    "src/test_agents.py": "36fea6020b5e4b61ed8d39e9b00e07d0a7d778b7617913241e07c7c25a46b097",
+    "src/test_baseline_agent.py": "c0c1e6c327ac7916b063ed8c29ecc18c29a1e673c8563ef47329c9ea67b6658b",
+    "src/test_benchmark.py": "a988596dc6536de35fe731bad5503f81117eacd91b0fbe8595057d9f88fb0242",
+    "src/test_benchmark_conflicts.py": "3a6f89bf7fa7fc6281aea0f8fb379e86931ffc418ba1ec61a584751433d36f0a",
+    "src/test_config_provider.py": "1e3b465806148280b416efd3bbbca7ccaa3aa74ca3953c98303597907a0aa48d",
+    "src/test_memory_store.py": "cc85efcf0c60d656993ce48cd5a069f01cdb7edf6f6774682c4676cde7a6e89d"
+  },
+  "credential_pattern_scan": "no credential-like values found in implementation, tests or dependency files"
+}

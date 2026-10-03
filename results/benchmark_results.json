@@ -1,0 +1,302 @@
+{
+  "mode": "offline",
+  "compact_threshold_tokens": 1000,
+  "compact_keep_messages": 4,
+  "disabled_compact_threshold_tokens": 1000000,
+  "clean_runs_identical": true,
+  "python_hash_seeds": [
+    1,
+    2
+  ],
+  "benchmark_output_sha256": "0ad2ee95072889b0ff4cd57310af5df6d41ade19845270dacc6bf48835df38e4",
+  "dataset_sha256": {
+    "data/conversations.json": "13f6569675500babce3d4a7fc4f5b2c2bea65af12be7d96d2a04d21b7d0a803c",
+    "data/advanced_long_context.json": "8532a0f68298dc3d070210864f0a776bc51df0b5b19766944f1651643a914f8d"
+  },
+  "profile_sha256": {
+    "benchmarks/long_context/profiles/dungct_stress/User.md": "532aead1d1456e03837461e74d55e4b3222dd0a93788f2ef320ca182453a609f",
+    "benchmarks/standard/profiles/dungct/User.md": "77d48f6622618aedf1e89c9808b02502ecc66982bc8b553ad532c84114f6e62d"
+  },
+  "demo_preserved": true,
+  "dataset_unchanged": true,
+  "config_unchanged": true,
+  "stress_ablation": [
+    {
+      "agent_name": "Baseline",
+      "agent_tokens_only": 826,
+      "prompt_tokens_processed": 27257,
+      "recall_score": 0.0,
+      "response_quality": 0.0,
+      "memory_growth_bytes": 0,
+      "compactions": 0
+    },
+    {
+      "agent_name": "Advanced",
+      "agent_tokens_only": 822,
+      "prompt_tokens_processed": 12617,
+      "recall_score": 1.0,
+      "response_quality": 1.0,
+      "memory_growth_bytes": 238,
+      "compactions": 4
+    },
+    {
+      "agent_name": "Advanced (compact disabled)",
+      "agent_tokens_only": 822,
+      "prompt_tokens_processed": 28618,
+      "recall_score": 1.0,
+      "response_quality": 1.0,
+      "memory_growth_bytes": 238,
+      "compactions": 0
+    }
+  ],
+  "stress_training_turns": {
+    "Baseline": [
+      {
+        "turn": 1,
+        "prompt_tokens": 222,
+        "agent_tokens": 96
+      },
+      {
+        "turn": 2,
+        "prompt_tokens": 469,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 3,
+        "prompt_tokens": 654,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 4,
+        "prompt_tokens": 846,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 5,
+        "prompt_tokens": 1041,
+        "agent_tokens": 96
+      },
+      {
+        "turn": 6,
+        "prompt_tokens": 1291,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 7,
+        "prompt_tokens": 1469,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 8,
+        "prompt_tokens": 1650,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 9,
+        "prompt_tokens": 1797,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 10,
+        "prompt_tokens": 1954,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 11,
+        "prompt_tokens": 2124,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 12,
+        "prompt_tokens": 2318,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 13,
+        "prompt_tokens": 2500,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 14,
+        "prompt_tokens": 2659,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 15,
+        "prompt_tokens": 2852,
+        "agent_tokens": 43
+      },
+      {
+        "turn": 16,
+        "prompt_tokens": 3010,
+        "agent_tokens": 44
+      }
+    ],
+    "Advanced": [
+      {
+        "turn": 1,
+        "prompt_tokens": 283,
+        "agent_tokens": 96
+      },
+      {
+        "turn": 2,
+        "prompt_tokens": 530,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 3,
+        "prompt_tokens": 715,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 4,
+        "prompt_tokens": 907,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 5,
+        "prompt_tokens": 608,
+        "agent_tokens": 96
+      },
+      {
+        "turn": 6,
+        "prompt_tokens": 858,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 7,
+        "prompt_tokens": 1053,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 8,
+        "prompt_tokens": 600,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 9,
+        "prompt_tokens": 748,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 10,
+        "prompt_tokens": 905,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 11,
+        "prompt_tokens": 1075,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 12,
+        "prompt_tokens": 614,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 13,
+        "prompt_tokens": 796,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 14,
+        "prompt_tokens": 955,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 15,
+        "prompt_tokens": 602,
+        "agent_tokens": 43
+      },
+      {
+        "turn": 16,
+        "prompt_tokens": 760,
+        "agent_tokens": 44
+      }
+    ],
+    "Advanced (compact disabled)": [
+      {
+        "turn": 1,
+        "prompt_tokens": 283,
+        "agent_tokens": 96
+      },
+      {
+        "turn": 2,
+        "prompt_tokens": 530,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 3,
+        "prompt_tokens": 715,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 4,
+        "prompt_tokens": 907,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 5,
+        "prompt_tokens": 1102,
+        "agent_tokens": 96
+      },
+      {
+        "turn": 6,
+        "prompt_tokens": 1352,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 7,
+        "prompt_tokens": 1547,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 8,
+        "prompt_tokens": 1728,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 9,
+        "prompt_tokens": 1876,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 10,
+        "prompt_tokens": 2033,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 11,
+        "prompt_tokens": 2203,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 12,
+        "prompt_tokens": 2397,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 13,
+        "prompt_tokens": 2579,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 14,
+        "prompt_tokens": 2738,
+        "agent_tokens": 36
+      },
+      {
+        "turn": 15,
+        "prompt_tokens": 2931,
+        "agent_tokens": 43
+      },
+      {
+        "turn": 16,
+        "prompt_tokens": 3089,
+        "agent_tokens": 44
+      }
+    ]
+  },
+  "prompt_reduction_vs_baseline_percent": 53.71097332795245,
+  "prompt_reduction_vs_advanced_no_compact_percent": 55.91236284855685
+}
